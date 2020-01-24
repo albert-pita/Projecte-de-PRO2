@@ -1,0 +1,358 @@
+\hypertarget{class_sistema}{}\section{Referència de la Classe Sistema}
+\label{class_sistema}\index{Sistema@{Sistema}}
+
+
+Representa el sistema que controla els productes que hi ha dins del magatzem.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sistema_a815b07845ef6b03247b239333fe75e28}{Sistema} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+\hyperlink{class_sistema_aafc86e0f2c3d734fb4c0985f70c27a1a}{$\sim$\+Sistema} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_ac56c15dc1f293214b694646a8273d22a}{afegir\+\_\+items} (string \&idprod, int quantitat)
+\begin{DoxyCompactList}\small\item\em Modificadora que afegeix una certa quantitat d\textquotesingle{}unitats d\textquotesingle{}un producte dins del sistema general del magatzem. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a1597f02c0f2a0f5b3d9582fb45e8400e}{treure\+\_\+items} (string \&idprod, int quantitat)
+\begin{DoxyCompactList}\small\item\em Modificadora que treu una certa quantitat d\textquotesingle{}unitats d\textquotesingle{}un producte del sistema general del magatzem. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_abb3cc435ff5eb055f3d640494d418fa7}{poner\+\_\+prod} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Modificadora que afegeix un producte no existent dintre del sistema amb zero unitats, donant error si ja existeix. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a3b4d4ae67bca320f0afc82f26433d85b}{quitar\+\_\+prod} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Modificadora que dona de baixa un producte del sistema si aquest existeix i no queden unitats. Si no existeix o li queden unitats, dona error. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a41536e95e8d3805116ba4b03ef5ed915}{consultar\+\_\+prod} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Consulta les unitats d\textquotesingle{}un cert producte. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a0efdf7e6792aca4405152f480d73f817}{inventario} ()
+\begin{DoxyCompactList}\small\item\em Per a cada producte s\textquotesingle{}escriu el seu identificador i la quantitat total que hi ha al magatzem d\textquotesingle{}ell. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sistema_ae9d3be838b19599377f66e0276cbdda8}{esta\+\_\+prod} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Retorna un boolea que diu si el producte esta al sistema general del magatzem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, int $>$ \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_sistema}{Sistema} general d\textquotesingle{}un magatzem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Representa el sistema que controla els productes que hi ha dins del magatzem. 
+
+Controla els productes que hi han dins l\textquotesingle{}almacen. Es pot consultar si hi ha algun producte, es pot afegir un, se\textquotesingle{}n pot eliminar i també es pot posar o treure una certa quantitat. Es pot fer també un inventari dels productes que hi han al almacen. 
+
+Definició a la línia 25 del fitxer Sistema.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\index{Sistema@{Sistema}!Sistema@{Sistema}}
+\index{Sistema@{Sistema}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{Sistema()}{Sistema()}}]{\setlength{\rightskip}{0pt plus 5cm}Sistema\+::\+Sistema (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_a815b07845ef6b03247b239333fe75e28}{}\label{class_sistema_a815b07845ef6b03247b239333fe75e28}
+
+
+Creadora per defecte. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Crea un sistema buit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 7 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+7                  \{
+8     map<string,int> \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S};
+9 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!````~Sistema@{$\sim$\+Sistema}}
+\index{````~Sistema@{$\sim$\+Sistema}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sistema()}{~Sistema()}}]{\setlength{\rightskip}{0pt plus 5cm}Sistema\+::$\sim$\+Sistema (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_aafc86e0f2c3d734fb4c0985f70c27a1a}{}\label{class_sistema_aafc86e0f2c3d734fb4c0985f70c27a1a}
+
+
+Destructora per defecte. 
+
+\begin{DoxyPrecond}{Precondició}
+Existeix un sistema 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Destrueix el sistema 
+\end{DoxyPostcond}
+
+
+Definició a la línia 11 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+11 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\index{Sistema@{Sistema}!afegir\+\_\+items@{afegir\+\_\+items}}
+\index{afegir\+\_\+items@{afegir\+\_\+items}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{afegir\+\_\+items(string \&idprod, int quantitat)}{afegir_items(string &idprod, int quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\+::afegir\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod, }
+\item[{int}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_ac56c15dc1f293214b694646a8273d22a}{}\label{class_sistema_ac56c15dc1f293214b694646a8273d22a}
+
+
+Modificadora que afegeix una certa quantitat d\textquotesingle{}unitats d\textquotesingle{}un producte dins del sistema general del magatzem. 
+
+\begin{DoxyPrecond}{Precondició}
+Es passa per parametre l\textquotesingle{}identificador d\textquotesingle{}un producte i una certa quantitat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}ha afegit la quantitat desitjada del {\itshape idprod} dins del sistema general del magatzem 
+\end{DoxyPostcond}
+
+
+Definició a la línia 22 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+22                                                         \{
+23     map<string,int>::iterator it = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.find(idprod);
+24     it->second += quantitat;
+25 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!treure\+\_\+items@{treure\+\_\+items}}
+\index{treure\+\_\+items@{treure\+\_\+items}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{treure\+\_\+items(string \&idprod, int quantitat)}{treure_items(string &idprod, int quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\+::treure\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod, }
+\item[{int}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_a1597f02c0f2a0f5b3d9582fb45e8400e}{}\label{class_sistema_a1597f02c0f2a0f5b3d9582fb45e8400e}
+
+
+Modificadora que treu una certa quantitat d\textquotesingle{}unitats d\textquotesingle{}un producte del sistema general del magatzem. 
+
+\begin{DoxyPrecond}{Precondició}
+Es passa per parametre l\textquotesingle{}identificador d\textquotesingle{}un producte i una certa quantitat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}ha eliminat la quantitat desitjada de {\itshape idprod} del sistema general del magatzem 
+\end{DoxyPostcond}
+
+
+Definició a la línia 27 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+27                                                         \{
+28     map<string,int>::iterator it = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.find(idprod);
+29     it->second -= quantitat;
+30 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!poner\+\_\+prod@{poner\+\_\+prod}}
+\index{poner\+\_\+prod@{poner\+\_\+prod}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{poner\+\_\+prod(string \&idprod)}{poner_prod(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\+::poner\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_abb3cc435ff5eb055f3d640494d418fa7}{}\label{class_sistema_abb3cc435ff5eb055f3d640494d418fa7}
+
+
+Modificadora que afegeix un producte no existent dintre del sistema amb zero unitats, donant error si ja existeix. 
+
+\begin{DoxyPrecond}{Precondició}
+Es passa per paràmetre l\textquotesingle{}identificador del producte 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}introdueix a sistema el producte sense cap unitat si no existeix, si prèviament està dona error 
+\end{DoxyPostcond}
+
+
+Definició a la línia 47 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+47                                        \{
+48     \textcolor{keywordflow}{if} (\hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.empty()) \{
+49         pair<string,int> x;
+50         x.first = idprod;
+51         x.second = 0;
+52         \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.insert(x);
+53     \}
+54     \textcolor{keywordflow}{else} \{
+55         \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};
+56         \textcolor{keywordflow}{for}(map<string,int>::const\_iterator i = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.begin(); i != \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.end() and not found; ++i) \{
+57             \textcolor{keywordflow}{if} (i->first == idprod) found = \textcolor{keyword}{true};
+58         \}
+59         \textcolor{keywordflow}{if} (not found) \{
+60             pair<string,int> x;
+61             x.first = idprod;
+62             x.second = 0;
+63             \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.insert(x);
+64         \}
+65         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  error"} << endl;
+66     \}   
+67 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!quitar\+\_\+prod@{quitar\+\_\+prod}}
+\index{quitar\+\_\+prod@{quitar\+\_\+prod}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{quitar\+\_\+prod(string \&idprod)}{quitar_prod(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\+::quitar\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_a3b4d4ae67bca320f0afc82f26433d85b}{}\label{class_sistema_a3b4d4ae67bca320f0afc82f26433d85b}
+
+
+Modificadora que dona de baixa un producte del sistema si aquest existeix i no queden unitats. Si no existeix o li queden unitats, dona error. 
+
+\begin{DoxyPrecond}{Precondició}
+Es passa per paràmetre l\textquotesingle{}identificador del producte 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es dona de baixa el producte amb l\textquotesingle{}identificador proporcionat, si aquest no existeix o li queden unitats, saltara un error 
+\end{DoxyPostcond}
+
+
+Definició a la línia 69 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+69                                         \{
+70     \textcolor{keywordflow}{if} (\hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.empty()) cout << \textcolor{stringliteral}{"  error"} << endl;
+71     \textcolor{keywordflow}{else} \{
+72         \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};
+73         map<string,int>::iterator aux;
+74         \textcolor{keywordflow}{for}(map<string,int>::iterator i = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.begin(); i != \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.end() and not found; ++i) \{
+75             \textcolor{keywordflow}{if} (i->first == idprod) \{
+76                 found = \textcolor{keyword}{true};
+77                 aux = i;
+78             \}
+79         \}
+80         \textcolor{keywordflow}{if}(not found) cout << \textcolor{stringliteral}{"  error"} << endl;
+81         \textcolor{keywordflow}{else} \{
+82             \textcolor{keywordflow}{if} (aux->second != 0) cout << \textcolor{stringliteral}{"  error"} << endl;
+83             \textcolor{keywordflow}{else} \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.erase(idprod);
+84         \}
+85     \}
+86 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!consultar\+\_\+prod@{consultar\+\_\+prod}}
+\index{consultar\+\_\+prod@{consultar\+\_\+prod}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{consultar\+\_\+prod(string \&idprod)}{consultar_prod(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\+::consultar\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_a41536e95e8d3805116ba4b03ef5ed915}{}\label{class_sistema_a41536e95e8d3805116ba4b03ef5ed915}
+
+
+Consulta les unitats d\textquotesingle{}un cert producte. 
+
+\begin{DoxyPrecond}{Precondició}
+Es passa per paràmetre l\textquotesingle{}identificador del producte 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Si el producte existeix al parametre implicit, escriure les seves unitats, si no, dona error 
+\end{DoxyPostcond}
+
+
+Definició a la línia 32 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+32                                            \{
+33     \textcolor{keywordflow}{if} (\hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.empty()) cout << \textcolor{stringliteral}{"  error"} << endl;
+34     \textcolor{keywordflow}{else} \{
+35         map<string,int>::iterator i = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.find(idprod);
+36         \textcolor{keywordflow}{if} (i != \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.end()) cout << \textcolor{stringliteral}{"  "} << i->second << endl;
+37         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  error"} << endl;
+38     \}
+39 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!inventario@{inventario}}
+\index{inventario@{inventario}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{inventario()}{inventario()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\+::inventario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_a0efdf7e6792aca4405152f480d73f817}{}\label{class_sistema_a0efdf7e6792aca4405152f480d73f817}
+
+
+Per a cada producte s\textquotesingle{}escriu el seu identificador i la quantitat total que hi ha al magatzem d\textquotesingle{}ell. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}escriu cada producte amb el seu identificador i la quantitat total que hi ha al magatzem d\textquotesingle{}ell, ordenat per idprod. Si esta buit, no escriure res 
+\end{DoxyPostcond}
+
+
+Definició a la línia 41 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+41                          \{
+42     \textcolor{keywordflow}{for}(map<string,int>::const\_iterator i = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.begin(); i != \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.end(); ++i) \{
+43         cout << \textcolor{stringliteral}{"  "} << i->first << \textcolor{stringliteral}{" "} << i->second << endl;
+44     \}
+45 \}
+\end{DoxyCode}
+\index{Sistema@{Sistema}!esta\+\_\+prod@{esta\+\_\+prod}}
+\index{esta\+\_\+prod@{esta\+\_\+prod}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{esta\+\_\+prod(string \&idprod)}{esta_prod(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sistema\+::esta\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sistema_ae9d3be838b19599377f66e0276cbdda8}{}\label{class_sistema_ae9d3be838b19599377f66e0276cbdda8}
+
+
+Retorna un boolea que diu si el producte esta al sistema general del magatzem. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna true si el producte amb {\itshape idprod} esta al sistema general o false si no hi esta 
+\end{DoxyPostcond}
+
+
+Definició a la línia 13 del fitxer Sistema.\+cc.
+
+
+\begin{DoxyCode}
+13                                       \{
+14     \textcolor{keywordflow}{if} (\hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.empty()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+15     \textcolor{keywordflow}{else} \{
+16         map<string,int>::iterator i = \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.find(idprod);
+17         \textcolor{keywordflow}{if} (i != \hyperlink{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{S}.end()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+18         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+19     \}
+20 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\index{Sistema@{Sistema}!S@{S}}
+\index{S@{S}!Sistema@{Sistema}}
+\subsubsection[{\texorpdfstring{S}{S}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string,int$>$ Sistema\+::S\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}{}\label{class_sistema_ad661bd526f622b1a3c4a0688b010eea2}
+
+
+\hyperlink{class_sistema}{Sistema} general d\textquotesingle{}un magatzem. 
+
+
+
+Definició a la línia 96 del fitxer Sistema.\+hh.
+
+
+
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sistema_8hh}{Sistema.\+hh}\item 
+\hyperlink{_sistema_8cc}{Sistema.\+cc}\end{DoxyCompactItemize}

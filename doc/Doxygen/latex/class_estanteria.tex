@@ -1,0 +1,513 @@
+\hypertarget{class_estanteria}{}\section{Referència de la Classe Estanteria}
+\label{class_estanteria}\index{Estanteria@{Estanteria}}
+
+
+Representa l\textquotesingle{}estanteria que hi ha a cada sala.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_estanteria_a55c7a4e067b17ba7e79f61ce8929ac88}{Estanteria} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+\hyperlink{class_estanteria_ab0593879a794013eb05ee0b3b61dfd54}{Estanteria} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Constructora que crea una estanteria de mida ixj. \end{DoxyCompactList}\item 
+\hyperlink{class_estanteria_a4d7827dbb58db685a34b305b6ff8e755}{$\sim$\+Estanteria} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. Esborra automàticament els objectes locals en sortir d\textquotesingle{}un àmbit de visibilitat. \end{DoxyCompactList}\item 
+int \hyperlink{class_estanteria_a8ab96b52673441f441cec50fb8e9378e}{afegir\+\_\+producte} (string \&idprod, int quantitat)
+\begin{DoxyCompactList}\small\item\em Coloca una certa quantitat d\textquotesingle{}un mateix producte dins del parametre implicit(una estanteria). \end{DoxyCompactList}\item 
+int \hyperlink{class_estanteria_a19a5ab5427f1ded37722fc071e87ef41}{eliminar\+\_\+productes} (string \&idprod, int quantitat)
+\begin{DoxyCompactList}\small\item\em Elimina una certa quantitat d\textquotesingle{}un mateix producte dins del parametre implicit(una estanteria). \end{DoxyCompactList}\item 
+void \hyperlink{class_estanteria_aefcf5c93b909a2d61c5805c4e39f56d1}{compactar\+\_\+estanteria} ()
+\begin{DoxyCompactList}\small\item\em Es realitza la compactacio del parametre implicit. \end{DoxyCompactList}\item 
+void \hyperlink{class_estanteria_a605404d278df85704686201e9ac5bc4b}{reorganitzar\+\_\+estanteria} ()
+\begin{DoxyCompactList}\small\item\em Es realitza la reorganització del parametre implicit. \end{DoxyCompactList}\item 
+void \hyperlink{class_estanteria_a4a5f0fb1576fc6245bd81249fedb2bb4}{Estanteria\+\_\+redimensionada} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Si totes les unitats dels productes que te el parametre implicit $<$= ixj, la nova dimensio de l\textquotesingle{}estanteria sera ixj. \end{DoxyCompactList}\item 
+bool \hyperlink{class_estanteria_a28210da5d76be58356c3544871130a2e}{no\+\_\+buida} ()
+\begin{DoxyCompactList}\small\item\em Retorna un boolea que diu si el parametre implicit esta buit o no. \end{DoxyCompactList}\item 
+string \hyperlink{class_estanteria_ad0b776e636062653f986010880610ced}{consultar\+\_\+pos\+\_\+estanteria} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Indica quin producte hi ha a la posicio (i,j) del parametre implicit. \end{DoxyCompactList}\item 
+void \hyperlink{class_estanteria_ac00f0367653416ca3bd588939a7c9c22}{escriure\+\_\+estanteria} () const 
+\begin{DoxyCompactList}\small\item\em Escriu per pantalla el parametre implicit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{files}
+\begin{DoxyCompactList}\small\item\em Files de l\textquotesingle{}estanteria. \end{DoxyCompactList}\item 
+int \hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes}
+\begin{DoxyCompactList}\small\item\em Columnes de l\textquotesingle{}estanteria. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}
+\begin{DoxyCompactList}\small\item\em Estructura de l\textquotesingle{}estanteria. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\+\_\+sala}
+\begin{DoxyCompactList}\small\item\em Inventari de la sala. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Representa l\textquotesingle{}estanteria que hi ha a cada sala. 
+
+Te un tamany ixj. Pot contindre en cada una de les seves caselles o un producte o res (representat amb la paraula N\+U\+LL). S\textquotesingle{}utilitza per emmagatzemar productes. Es poden afegir productes o eliminar-\/los. Es pot reordenar de dues formes diferents, compactant l\textquotesingle{}estanteria o reorganitzant-\/la. També es possible redimensionar l\textquotesingle{}estanteria donant un nou tamany si aquest compleix certes condicions. També es pot consultar que hi ha en una posicio especifica d\textquotesingle{}ella. 
+
+Definició a la línia 28 del fitxer Estanteria.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\index{Estanteria@{Estanteria}!Estanteria@{Estanteria}}
+\index{Estanteria@{Estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{Estanteria()}{Estanteria()}}]{\setlength{\rightskip}{0pt plus 5cm}Estanteria\+::\+Estanteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a55c7a4e067b17ba7e79f61ce8929ac88}{}\label{class_estanteria_a55c7a4e067b17ba7e79f61ce8929ac88}
+
+
+Creadora per defecte. 
+
+Se executa automaticament al declarar una estanteria. \begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Crea una estanteria de 0x0 buida 
+\end{DoxyPostcond}
+
+
+Definició a la línia 3 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+3                        \{
+4     \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est} = (vector<string>(0));
+5     \hyperlink{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{files} = 0;
+6     \hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes} = 0;
+7 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!Estanteria@{Estanteria}}
+\index{Estanteria@{Estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{Estanteria(int i, int j)}{Estanteria(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}Estanteria\+::\+Estanteria (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_ab0593879a794013eb05ee0b3b61dfd54}{}\label{class_estanteria_ab0593879a794013eb05ee0b3b61dfd54}
+
+
+Constructora que crea una estanteria de mida ixj. 
+
+Permet declarar una estanteria nova de {\itshape i} files i {\itshape j} columnes. \begin{DoxyPrecond}{Precondició}
+i $>$= 1 i j $>$= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Crea una estanteria de i files amb j columnes plena de productes nuls 
+\end{DoxyPostcond}
+
+
+Definició a la línia 9 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+9                                    \{
+10     \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est} = (vector<string> (i*j));
+11     \hyperlink{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{files} = i;
+12     \hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes} = j;
+13 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!````~Estanteria@{$\sim$\+Estanteria}}
+\index{````~Estanteria@{$\sim$\+Estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{$\sim$\+Estanteria()}{~Estanteria()}}]{\setlength{\rightskip}{0pt plus 5cm}Estanteria\+::$\sim$\+Estanteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a4d7827dbb58db685a34b305b6ff8e755}{}\label{class_estanteria_a4d7827dbb58db685a34b305b6ff8e755}
+
+
+Destructora per defecte. Esborra automàticament els objectes locals en sortir d\textquotesingle{}un àmbit de visibilitat. 
+
+\begin{DoxyPrecond}{Precondició}
+Existeix una estanteria 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Destrueix la estanteria 
+\end{DoxyPostcond}
+
+
+Definició a la línia 15 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+15 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\index{Estanteria@{Estanteria}!afegir\+\_\+producte@{afegir\+\_\+producte}}
+\index{afegir\+\_\+producte@{afegir\+\_\+producte}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{afegir\+\_\+producte(string \&idprod, int quantitat)}{afegir_producte(string &idprod, int quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}int Estanteria\+::afegir\+\_\+producte (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod, }
+\item[{int}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a8ab96b52673441f441cec50fb8e9378e}{}\label{class_estanteria_a8ab96b52673441f441cec50fb8e9378e}
+
+
+Coloca una certa quantitat d\textquotesingle{}un mateix producte dins del parametre implicit(una estanteria). 
+
+\begin{DoxyPrecond}{Precondició}
+Al canal estandard d\textquotesingle{}entrada hi ha preparades l\textquotesingle{}identificador d\textquotesingle{}un producte i una certa quantitat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}afegeixen totes les unitats(= quantitat) que entrin dins el parametre implicit i es retorna la quantitat que no s\textquotesingle{}ha pogut afegir 
+\end{DoxyPostcond}
+
+
+Definició a la línia 17 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+17                                                              \{
+18     \textcolor{keywordtype}{int} aux = quantitat;
+19     \textcolor{keywordtype}{bool} ha\_afegit = \textcolor{keyword}{false};
+20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.size() and quantitat > 0; ++i) \{
+21         \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i] == \textcolor{stringliteral}{""}) \{
+22             \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i] = idprod;
+23             --quantitat;
+24             ha\_afegit = \textcolor{keyword}{true};
+25         \}
+26     \}
+27     \textcolor{keywordflow}{if} (ha\_afegit) \{
+28         map<string,int>::iterator it = \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.find(idprod);
+29         \textcolor{keywordflow}{if} (it != \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.end()) it->second += (aux-quantitat);
+30         \textcolor{keywordflow}{else} \{
+31             pair<string,int> x;
+32             x.first = idprod;
+33             x.second = (aux-quantitat);
+34             \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.insert(x);
+35         \}
+36     \}
+37     \textcolor{keywordflow}{return} quantitat;
+38 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!eliminar\+\_\+productes@{eliminar\+\_\+productes}}
+\index{eliminar\+\_\+productes@{eliminar\+\_\+productes}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{eliminar\+\_\+productes(string \&idprod, int quantitat)}{eliminar_productes(string &idprod, int quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}int Estanteria\+::eliminar\+\_\+productes (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod, }
+\item[{int}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a19a5ab5427f1ded37722fc071e87ef41}{}\label{class_estanteria_a19a5ab5427f1ded37722fc071e87ef41}
+
+
+Elimina una certa quantitat d\textquotesingle{}un mateix producte dins del parametre implicit(una estanteria). 
+
+\begin{DoxyPrecond}{Precondició}
+Al canal estandard d\textquotesingle{}entrada hi ha preparades l\textquotesingle{}identificador d\textquotesingle{}un producte i una certa quantitat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}eliminen totes les unitats(= quantitat) del parametre implicit amb identificador = {\itshape idprod} i es retorna la quantitat que no s\textquotesingle{}ha pogut eliminar 
+\end{DoxyPostcond}
+
+
+Definició a la línia 40 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+40                                                                \{
+41     \textcolor{keywordtype}{int} aux = quantitat;
+42     \textcolor{keywordtype}{bool} ha\_borrat = \textcolor{keyword}{false};
+43     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.size() and quantitat > 0; ++i) \{
+44         \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i] == idprod) \{
+45             \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i] = \textcolor{stringliteral}{""};
+46             --quantitat;
+47             ha\_borrat = \textcolor{keyword}{true};
+48         \}
+49     \}
+50     \textcolor{keywordflow}{if} (ha\_borrat) \{
+51         map<string,int>::iterator it = \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.find(idprod);
+52         it->second -= (aux-quantitat);
+53         \textcolor{keywordflow}{if} (it->second == 0) \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.erase(idprod);
+54     \}
+55     \textcolor{keywordflow}{return} quantitat;
+56 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!compactar\+\_\+estanteria@{compactar\+\_\+estanteria}}
+\index{compactar\+\_\+estanteria@{compactar\+\_\+estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{compactar\+\_\+estanteria()}{compactar_estanteria()}}]{\setlength{\rightskip}{0pt plus 5cm}void Estanteria\+::compactar\+\_\+estanteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_aefcf5c93b909a2d61c5805c4e39f56d1}{}\label{class_estanteria_aefcf5c93b909a2d61c5805c4e39f56d1}
+
+
+Es realitza la compactacio del parametre implicit. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Els productes queden compactats cap a l\textquotesingle{}esquerra i cap a baix de manera que no quedi cap forat entre dos productes 
+\end{DoxyPostcond}
+
+
+Definició a la línia 58 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+58                                       \{
+59     \textcolor{keywordtype}{int} poscanvi = 0;
+60     \textcolor{keywordtype}{bool} canvi = \textcolor{keyword}{false};
+61     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.size(); ++i) \{
+62         \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i] == \textcolor{stringliteral}{""} and not canvi) \{
+63             canvi = \textcolor{keyword}{true};
+64             poscanvi = i;
+65         \}
+66         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i] != \textcolor{stringliteral}{""} and canvi)\{
+67             swap(\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[poscanvi],\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[i]);
+68             canvi = \textcolor{keyword}{false};
+69             i = poscanvi;
+70         \}
+71     \}
+72 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!reorganitzar\+\_\+estanteria@{reorganitzar\+\_\+estanteria}}
+\index{reorganitzar\+\_\+estanteria@{reorganitzar\+\_\+estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{reorganitzar\+\_\+estanteria()}{reorganitzar_estanteria()}}]{\setlength{\rightskip}{0pt plus 5cm}void Estanteria\+::reorganitzar\+\_\+estanteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a605404d278df85704686201e9ac5bc4b}{}\label{class_estanteria_a605404d278df85704686201e9ac5bc4b}
+
+
+Es realitza la reorganització del parametre implicit. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Els productes queden reorganitzats alfabèticament sense deixar espais ni abans ni entre ells 
+\end{DoxyPostcond}
+
+
+Definició a la línia 81 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+81                                          \{
+82     sort(\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.begin(),\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.end(),\hyperlink{_estanteria_8cc_ac0047e8b44c74d982f8a9009e43c3e96}{cmp});
+83 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!Estanteria\+\_\+redimensionada@{Estanteria\+\_\+redimensionada}}
+\index{Estanteria\+\_\+redimensionada@{Estanteria\+\_\+redimensionada}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{Estanteria\+\_\+redimensionada(int i, int j)}{Estanteria_redimensionada(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}void Estanteria\+::\+Estanteria\+\_\+redimensionada (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a4a5f0fb1576fc6245bd81249fedb2bb4}{}\label{class_estanteria_a4a5f0fb1576fc6245bd81249fedb2bb4}
+
+
+Si totes les unitats dels productes que te el parametre implicit $<$= ixj, la nova dimensio de l\textquotesingle{}estanteria sera ixj. 
+
+\begin{DoxyPrecond}{Precondició}
+Al canal estandard d\textquotesingle{}entrada hi ha preparades la nova possible dimensio de l\textquotesingle{}estanteria 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Si totes les unitats dels productes que te el parametre implicit $<$= ixj, la dimensio del paramentre implicit a partir d\textquotesingle{}ara sera ixj. Si no hi caben donara error 
+\end{DoxyPostcond}
+
+
+Definició a la línia 85 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+85                                                       \{
+86     \textcolor{keywordtype}{int} suma = 0;
+87     \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a28210da5d76be58356c3544871130a2e}{no\_buida}()) \textcolor{keywordflow}{for} (map<string,int>::iterator it = \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.begin(); it != 
+      \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.end();++it) suma += it->second;
+88     if ((i*j) >= suma) \{
+89         \textcolor{keywordtype}{int} new\_size = i*j;
+90         \hyperlink{class_estanteria_aefcf5c93b909a2d61c5805c4e39f56d1}{compactar\_estanteria}();
+91         \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.resize(new\_size);
+92         \hyperlink{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{files} = i;
+93         \hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes} = j;
+94     \}
+95     \textcolor{keywordflow}{else} \{
+96         cout << \textcolor{stringliteral}{"  error"} << endl;
+97     \}
+98 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!no\+\_\+buida@{no\+\_\+buida}}
+\index{no\+\_\+buida@{no\+\_\+buida}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{no\+\_\+buida()}{no_buida()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Estanteria\+::no\+\_\+buida (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_a28210da5d76be58356c3544871130a2e}{}\label{class_estanteria_a28210da5d76be58356c3544871130a2e}
+
+
+Retorna un boolea que diu si el parametre implicit esta buit o no. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna true si el parametre implicit no esta buit i false si esta buit. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 100 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+100                           \{
+101     \textcolor{keywordflow}{if}(not \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.empty()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+102     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+103 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!consultar\+\_\+pos\+\_\+estanteria@{consultar\+\_\+pos\+\_\+estanteria}}
+\index{consultar\+\_\+pos\+\_\+estanteria@{consultar\+\_\+pos\+\_\+estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{consultar\+\_\+pos\+\_\+estanteria(int i, int j)}{consultar_pos_estanteria(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}string Estanteria\+::consultar\+\_\+pos\+\_\+estanteria (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{class_estanteria_ad0b776e636062653f986010880610ced}{}\label{class_estanteria_ad0b776e636062653f986010880610ced}
+
+
+Indica quin producte hi ha a la posicio (i,j) del parametre implicit. 
+
+\begin{DoxyPrecond}{Precondició}
+Passa per parametres la posicio del producte 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es retornara el que hi hagi a la posicio (i,j) del parametre implicit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 105 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+105                                                         \{
+106     \textcolor{keywordtype}{int} pos =((j-1)-(\hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes}-1))+((\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}.size()-1)-(\hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes}*(i-1)));
+107     \textcolor{keywordflow}{return} \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[pos];
+108 \}
+\end{DoxyCode}
+\index{Estanteria@{Estanteria}!escriure\+\_\+estanteria@{escriure\+\_\+estanteria}}
+\index{escriure\+\_\+estanteria@{escriure\+\_\+estanteria}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{escriure\+\_\+estanteria() const }{escriure_estanteria() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Estanteria\+::escriure\+\_\+estanteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_estanteria_ac00f0367653416ca3bd588939a7c9c22}{}\label{class_estanteria_ac00f0367653416ca3bd588939a7c9c22}
+
+
+Escriu per pantalla el parametre implicit. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}han escrit pel canal estandard de sortida el parametre implicit i els productes que conte (a les posicions on no hi ha res surt \char`\"{}\+N\+U\+L\+L\char`\"{}). S\textquotesingle{}han escrit també les unitats totals de tots els productes que hi ha a l\textquotesingle{}estanteria. I també s\textquotesingle{}ha escrit cada producte, un a un, i les seves unitats dins del parametre implicit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 110 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+110                                            \{
+111     \textcolor{keywordtype}{int} x = \hyperlink{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{files}*\hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes} - \hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes}, col = 0, fil = 0;
+112     \textcolor{keywordflow}{while} (x >= 0 and fil <= \hyperlink{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{files}) \{
+113         \textcolor{keywordflow}{if} (col == 0) \{
+114             \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[x] == \textcolor{stringliteral}{""}) cout << \textcolor{stringliteral}{"  "} << \textcolor{stringliteral}{"NULL"};
+115             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  "} << \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[x];
+116         \}
+117         \textcolor{keywordflow}{else} \{
+118             \textcolor{keywordflow}{if} (\hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[x] == \textcolor{stringliteral}{""}) cout << \textcolor{stringliteral}{" "} << \textcolor{stringliteral}{"NULL"};
+119             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{" "} << \hyperlink{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{Est}[x];
+120         \}
+121         ++x;
+122         ++col;
+123         \textcolor{keywordflow}{if} (col == columnes) \{
+124             x = x -(2*\hyperlink{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{columnes});
+125             col = 0;
+126             ++fil;
+127             cout << endl;
+128         \}
+129     \}
+130     
+131     \textcolor{keywordtype}{int} suma = 0;
+132     \textcolor{keywordtype}{bool} fa\_algo = \textcolor{keyword}{false};
+133     \textcolor{keywordflow}{for} (map<string,int>::const\_iterator it = \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.begin(); it != 
+      \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.end(); ++it) \{
+134         suma += it->second;
+135         fa\_algo = \textcolor{keyword}{true};
+136     \}
+137     \textcolor{keywordflow}{if} (not fa\_algo) cout << \textcolor{stringliteral}{"  "} << suma << endl;
+138     \textcolor{keywordflow}{else} \{
+139         cout << \textcolor{stringliteral}{"  "} << suma << endl;
+140         \textcolor{keywordflow}{for} (map<string,int>::const\_iterator it = \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.begin(); it != 
+      \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.end(); ++it) \{
+141             \textcolor{keywordflow}{if} (it == \hyperlink{class_estanteria_af37488895058b4673e3d093a84df4c63}{inv\_sala}.begin()) cout << \textcolor{stringliteral}{"  "} << it->first << \textcolor{stringliteral}{" "} << it->second;
+142             \textcolor{keywordflow}{else} \{
+143                 cout << endl;
+144                 cout << \textcolor{stringliteral}{"  "} << it->first << \textcolor{stringliteral}{" "} << it->second;
+145             \}
+146         \}
+147         cout << endl;
+148     \}
+149 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\index{Estanteria@{Estanteria}!files@{files}}
+\index{files@{files}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{files}{files}}]{\setlength{\rightskip}{0pt plus 5cm}int Estanteria\+::files\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}{}\label{class_estanteria_a649ad0331b78ba3c056fd9c42f0d26fe}
+
+
+Files de l\textquotesingle{}estanteria. 
+
+
+
+Definició a la línia 112 del fitxer Estanteria.\+hh.
+
+\index{Estanteria@{Estanteria}!columnes@{columnes}}
+\index{columnes@{columnes}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{columnes}{columnes}}]{\setlength{\rightskip}{0pt plus 5cm}int Estanteria\+::columnes\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}{}\label{class_estanteria_afd7a5087a18c8481060aef57ca8cbf78}
+
+
+Columnes de l\textquotesingle{}estanteria. 
+
+
+
+Definició a la línia 114 del fitxer Estanteria.\+hh.
+
+\index{Estanteria@{Estanteria}!Est@{Est}}
+\index{Est@{Est}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{Est}{Est}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Estanteria\+::\+Est\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}{}\label{class_estanteria_a4ed61c91fcad6b38af067a4be8233097}
+
+
+Estructura de l\textquotesingle{}estanteria. 
+
+
+
+Definició a la línia 116 del fitxer Estanteria.\+hh.
+
+\index{Estanteria@{Estanteria}!inv\+\_\+sala@{inv\+\_\+sala}}
+\index{inv\+\_\+sala@{inv\+\_\+sala}!Estanteria@{Estanteria}}
+\subsubsection[{\texorpdfstring{inv\+\_\+sala}{inv_sala}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string,int$>$ Estanteria\+::inv\+\_\+sala\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_estanteria_af37488895058b4673e3d093a84df4c63}{}\label{class_estanteria_af37488895058b4673e3d093a84df4c63}
+
+
+Inventari de la sala. 
+
+
+
+Definició a la línia 118 del fitxer Estanteria.\+hh.
+
+
+
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_estanteria_8hh}{Estanteria.\+hh}\item 
+\hyperlink{_estanteria_8cc}{Estanteria.\+cc}\end{DoxyCompactItemize}

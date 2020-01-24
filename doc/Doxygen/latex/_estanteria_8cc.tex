@@ -1,0 +1,39 @@
+\hypertarget{_estanteria_8cc}{}\section{Referència del Fitxer Estanteria.\+cc}
+\label{_estanteria_8cc}\index{Estanteria.\+cc@{Estanteria.\+cc}}
+Inclou el graf de dependències per a Estanteria.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{_estanteria_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_estanteria_8cc_ac0047e8b44c74d982f8a9009e43c3e96}{cmp} (string \&A, string \&B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\index{Estanteria.\+cc@{Estanteria.\+cc}!cmp@{cmp}}
+\index{cmp@{cmp}!Estanteria.\+cc@{Estanteria.\+cc}}
+\subsubsection[{\texorpdfstring{cmp(string \&\+A, string \&\+B)}{cmp(string &A, string &B)}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmp (
+\begin{DoxyParamCaption}
+\item[{string \&}]{A, }
+\item[{string \&}]{B}
+\end{DoxyParamCaption}
+)}\hypertarget{_estanteria_8cc_ac0047e8b44c74d982f8a9009e43c3e96}{}\label{_estanteria_8cc_ac0047e8b44c74d982f8a9009e43c3e96}
+
+
+Definició a la línia 74 del fitxer Estanteria.\+cc.
+
+
+\begin{DoxyCode}
+74                                \{
+75     \textcolor{keywordflow}{if} (A != \textcolor{stringliteral}{""} and B == \textcolor{stringliteral}{""}) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+76     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (A == \textcolor{stringliteral}{""} and B != \textcolor{stringliteral}{""}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+77     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (A < B) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+78     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+79 \}
+\end{DoxyCode}

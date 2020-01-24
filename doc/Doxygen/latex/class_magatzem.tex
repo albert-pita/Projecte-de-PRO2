@@ -1,0 +1,601 @@
+\hypertarget{class_magatzem}{}\section{Referència de la Classe Magatzem}
+\label{class_magatzem}\index{Magatzem@{Magatzem}}
+
+
+Representa un magatzem.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_magatzem_a5f17e941fe90f4294453be59cc691833}{Magatzem} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+\hyperlink{class_magatzem_a1f8075615baf976e4c8182f0c73c178f}{$\sim$\+Magatzem} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a82f901c8287586a33faa0f3c5030de11}{poner\+\_\+items} (int \&idsala, string \&idprod, int \&quantitat)
+\begin{DoxyCompactList}\small\item\em Modificadora que introdueix una certa quantitat de l\textquotesingle{}{\itshape idprod} a una sala amb {\itshape idsala}. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_afb609e5a5d912a56b8ae4f8e985602f5}{quitar\+\_\+items} (int \&idsala, string \&idprod, int \&quantitat)
+\begin{DoxyCompactList}\small\item\em Modificadora que treu una certa quantitat d\textquotesingle{}un {\itshape idprod} d\textquotesingle{}una certa estanteria amb {\itshape idsala}. Si no existeix el producte treu error. \end{DoxyCompactList}\item 
+int \hyperlink{class_magatzem_a586174830ec4d1df445fa54e260278ea}{distribuir\+\_\+immer} (Bin\+Tree$<$ int $>$ \&\hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T}, string \&idprod, int quantitat)
+\begin{DoxyCompactList}\small\item\em Funció immersiva de distribuir. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a15c31f32a673b7e3cf4443d03ace19a6}{distribuir} (string \&idprod, int quantitat)
+\begin{DoxyCompactList}\small\item\em Modificadora que distribueix una certa quantitat de nombre seguint una certa politica a l\textquotesingle{}hora de fer-\/ho. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a98bf19f0ad6438d4a305bc9dc7a2670e}{quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Modificadora que treu del inventari general del magatzem un producte. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_ab8776250b582bb6b7b666e426d1820c1}{poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Modificadora que afegeix del inventari general del magatzem un producte. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_aeaebd6e73de2e965686264ecce7a0d26}{compactar} (int \&idsala)
+\begin{DoxyCompactList}\small\item\em Compacta l\textquotesingle{}estanteria d\textquotesingle{}una sala seguint uns criteris concrets. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a101e50b85da7acf8bfc892c03321c14c}{reorganizar} (int \&idsala)
+\begin{DoxyCompactList}\small\item\em Reorganitza l\textquotesingle{}estanteria d\textquotesingle{}una sala seguint uns criteris concrets. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_adc1523fcbc1112437fdfe739fbeb393f}{redimensionar} (int \&idsala, int \&i, int \&j)
+\begin{DoxyCompactList}\small\item\em Redimensiona l\textquotesingle{}estanteria a una amb un tamany ixj on i $>$= 1 i j $>$= 1. L\textquotesingle{}estanteria no sera redimensionada si la quantitat d\textquotesingle{}objectes de l\textquotesingle{}estanteria original es superior al tamany de la nova estanteria que es vol redimensionar, si fos el cas donaria error. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_acb77f36344a5cb8e5590487766400d1c}{llegir} (int \&nombre\+\_\+sales)
+\begin{DoxyCompactList}\small\item\em Llegeix el nombre\+\_\+sales i \char`\"{}omple\char`\"{} el magatzem amb les seves respectives sales que tenen el seu respectiu identificador. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a08da684e5a033414ccf05182b3993b5b}{consultar\+\_\+pos} (int \&idsala, int \&fila, int \&columna)
+\begin{DoxyCompactList}\small\item\em Consultora de la posició d\textquotesingle{}un producte a una sala. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a504a5bbe9daa97e89f55caef7e234a0d}{inventario\+\_\+del\+\_\+mag} ()
+\begin{DoxyCompactList}\small\item\em Consultora que retorna l\textquotesingle{}inventari general del magatzem. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a0ce25c60c4ecb22acbc42836f160d770}{consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Consultora que retorna les unitats totals d\textquotesingle{}un cert producte al magatzem. \end{DoxyCompactList}\item 
+bool \hyperlink{class_magatzem_a401014dc25c79a3b0abbe05e4419d757}{esta\+\_\+prod\+\_\+al\+\_\+mag} (string \&idprod)
+\begin{DoxyCompactList}\small\item\em Consultora que retorna un boolea indicant si un cert producte esta al magatzem o no. \end{DoxyCompactList}\item 
+void \hyperlink{class_magatzem_a00b0dca704cec9b018c7cbd2a77a583a}{escribir} (int \&idsala)
+\begin{DoxyCompactList}\small\item\em Escriu el contingut de l\textquotesingle{}estanteria de la sala, de dalt a baix i d\textquotesingle{}esquerra a dreta, també les unitats que hi han en total a l\textquotesingle{}estanteria i per ordre d\textquotesingle{}identificador, s\textquotesingle{}aniran escribint tots els idprod i quantes unitats hi han d\textquotesingle{}aquest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+Bin\+Tree$<$ int $>$ \hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T}
+\begin{DoxyCompactList}\small\item\em Estructura del magatzem. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_estanteria}{Estanteria} $>$ \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}
+\begin{DoxyCompactList}\small\item\em Vector amb totes les sales del magatzem. \end{DoxyCompactList}\item 
+\hyperlink{class_sistema}{Sistema} \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_sistema}{Sistema} general del magatzem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Representa un magatzem. 
+
+Propiament un magatzem està compost de sales, les quals a dins tenen una estanteria que alhora emmagatzema productes. El magatzem pot tenir diferents tamanys, al parlar de tamany ens referim al nombre de sales que te. Es a partir d\textquotesingle{}ell que nosaltres accedim a les sales, estanteries o productes. 
+
+Definició a la línia 28 del fitxer Magatzem.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\index{Magatzem@{Magatzem}!Magatzem@{Magatzem}}
+\index{Magatzem@{Magatzem}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{Magatzem()}{Magatzem()}}]{\setlength{\rightskip}{0pt plus 5cm}Magatzem\+::\+Magatzem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a5f17e941fe90f4294453be59cc691833}{}\label{class_magatzem_a5f17e941fe90f4294453be59cc691833}
+
+
+Creadora per defecte. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Crea un magatzem amb cap sala 
+\end{DoxyPostcond}
+
+
+Definició a la línia 3 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+3                    \{
+4     BinTree<int> \hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T};
+5 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!````~Magatzem@{$\sim$\+Magatzem}}
+\index{````~Magatzem@{$\sim$\+Magatzem}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{$\sim$\+Magatzem()}{~Magatzem()}}]{\setlength{\rightskip}{0pt plus 5cm}Magatzem\+::$\sim$\+Magatzem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a1f8075615baf976e4c8182f0c73c178f}{}\label{class_magatzem_a1f8075615baf976e4c8182f0c73c178f}
+
+
+Destructora per defecte. 
+
+\begin{DoxyPrecond}{Precondició}
+Existeix un magatzem 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Destrueix el magatzem 
+\end{DoxyPostcond}
+
+
+Definició a la línia 7 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+7 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\index{Magatzem@{Magatzem}!poner\+\_\+items@{poner\+\_\+items}}
+\index{poner\+\_\+items@{poner\+\_\+items}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{poner\+\_\+items(int \&idsala, string \&idprod, int \&quantitat)}{poner_items(int &idsala, string &idprod, int &quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::poner\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala, }
+\item[{string \&}]{idprod, }
+\item[{int \&}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a82f901c8287586a33faa0f3c5030de11}{}\label{class_magatzem_a82f901c8287586a33faa0f3c5030de11}
+
+
+Modificadora que introdueix una certa quantitat de l\textquotesingle{}{\itshape idprod} a una sala amb {\itshape idsala}. 
+
+\begin{DoxyPrecond}{Precondició}
+Preparats al canal d\textquotesingle{}entrada estandard la idsala, el idprod i la quantitat que es vol afegir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es posen a l\textquotesingle{}estanteria de la {\itshape idsala} la quantitat d\textquotesingle{}{\itshape idprod} passada, si hi caben menys que la quantitat senyalada, els sobrants es treuen pel canal estandard de sortida 
+\end{DoxyPostcond}
+
+
+Definició a la línia 9 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+9                                                                       \{
+10     \textcolor{keywordtype}{int} aux = quantitat;
+11     \textcolor{keywordtype}{int} ret = \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].afegir\_producte(idprod,quantitat);
+12     cout << \textcolor{stringliteral}{"  "} << ret << endl;
+13     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_ac56c15dc1f293214b694646a8273d22a}{afegir\_items}(idprod,aux-ret);
+14 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!quitar\+\_\+items@{quitar\+\_\+items}}
+\index{quitar\+\_\+items@{quitar\+\_\+items}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{quitar\+\_\+items(int \&idsala, string \&idprod, int \&quantitat)}{quitar_items(int &idsala, string &idprod, int &quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::quitar\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala, }
+\item[{string \&}]{idprod, }
+\item[{int \&}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_afb609e5a5d912a56b8ae4f8e985602f5}{}\label{class_magatzem_afb609e5a5d912a56b8ae4f8e985602f5}
+
+
+Modificadora que treu una certa quantitat d\textquotesingle{}un {\itshape idprod} d\textquotesingle{}una certa estanteria amb {\itshape idsala}. Si no existeix el producte treu error. 
+
+\begin{DoxyPrecond}{Precondició}
+Preparats al canal d\textquotesingle{}entrada estandard la idsala, el idprod i la quantitat que es vol eliminar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es retiren tots els {\itshape idprod} de l\textquotesingle{}estanteria de la {\itshape idsala}, es retorna un enter amb el nombre de {\itshape idprod} que no han pogut esser eliminats 
+\end{DoxyPostcond}
+
+
+Definició a la línia 16 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+16                                                                        \{
+17     \textcolor{keywordtype}{int} aux = quantitat;
+18     \textcolor{keywordtype}{int} ret = \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].eliminar\_productes(idprod,quantitat);
+19     cout << \textcolor{stringliteral}{"  "} << ret << endl;
+20     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_a1597f02c0f2a0f5b3d9582fb45e8400e}{treure\_items}(idprod,aux-ret);
+21 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!distribuir\+\_\+immer@{distribuir\+\_\+immer}}
+\index{distribuir\+\_\+immer@{distribuir\+\_\+immer}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{distribuir\+\_\+immer(\+Bin\+Tree$<$ int $>$ \&\+T, string \&idprod, int quantitat)}{distribuir_immer(BinTree< int > &T, string &idprod, int quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}int Magatzem\+::distribuir\+\_\+immer (
+\begin{DoxyParamCaption}
+\item[{Bin\+Tree$<$ int $>$ \&}]{T, }
+\item[{string \&}]{idprod, }
+\item[{int}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a586174830ec4d1df445fa54e260278ea}{}\label{class_magatzem_a586174830ec4d1df445fa54e260278ea}
+
+
+Funció immersiva de distribuir. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna un enter amb la quantitat de {\itshape idprod} que no ha estat possible distribuir 
+\end{DoxyPostcond}
+
+
+Definició a la línia 23 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+23                                                                              \{
+24     \textcolor{keywordflow}{if} (\hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T}.empty() or quantitat == 0) \{
+25         \textcolor{keywordflow}{return} quantitat;
+26     \}
+27     \textcolor{keywordflow}{else} \{
+28         \textcolor{keywordtype}{int} node = \hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T}.value(), sl,sr;
+29         BinTree<int> l = \hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T}.left();
+30         BinTree<int> r = \hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T}.right();
+31         quantitat = \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[node-1].afegir\_producte(idprod,quantitat);
+32         sl = \hyperlink{class_magatzem_a586174830ec4d1df445fa54e260278ea}{distribuir\_immer}(l,idprod,((quantitat+1)/2));
+33         sr = \hyperlink{class_magatzem_a586174830ec4d1df445fa54e260278ea}{distribuir\_immer}(r,idprod,(quantitat/2));
+34         \textcolor{keywordflow}{return} sl + sr;
+35     \}
+36 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!distribuir@{distribuir}}
+\index{distribuir@{distribuir}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{distribuir(string \&idprod, int quantitat)}{distribuir(string &idprod, int quantitat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::distribuir (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod, }
+\item[{int}]{quantitat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a15c31f32a673b7e3cf4443d03ace19a6}{}\label{class_magatzem_a15c31f32a673b7e3cf4443d03ace19a6}
+
+
+Modificadora que distribueix una certa quantitat de nombre seguint una certa politica a l\textquotesingle{}hora de fer-\/ho. 
+
+La politica de distribucio consisteix en que, començant des de la sala inicial, s\textquotesingle{}afegeixen totes les unitats del producte que es pugui a la sala. Despreś el restant, si es parell, es distribueix mitad a la sala de la dreta, mitad a la sala de l\textquotesingle{}esquerra. Si el restant no es parell, es distribueix, mitad a la dreta, i mitad+1 a l\textquotesingle{}esquerra. \begin{DoxyPrecond}{Precondició}
+Preparats al canal d\textquotesingle{}entrada estandard el idprod i la quantitat que es vol distribuir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Treu per pantalla la quantitat de {\itshape idprod} que no ha estat possible distribuir 
+\end{DoxyPostcond}
+
+
+Definició a la línia 38 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+38                                                        \{
+39     \textcolor{keywordtype}{int} aux = quantitat;
+40     \textcolor{keywordtype}{int} ret = \hyperlink{class_magatzem_a586174830ec4d1df445fa54e260278ea}{distribuir\_immer}(\hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T},idprod,quantitat);
+41     cout << \textcolor{stringliteral}{"  "} << ret << endl;
+42     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_ac56c15dc1f293214b694646a8273d22a}{afegir\_items}(idprod,aux-ret);
+43 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag@{quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag}}
+\index{quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag@{quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag(string \&idprod)}{quitar_prod_del_s_del_mag(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::quitar\+\_\+prod\+\_\+del\+\_\+s\+\_\+del\+\_\+mag (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a98bf19f0ad6438d4a305bc9dc7a2670e}{}\label{class_magatzem_a98bf19f0ad6438d4a305bc9dc7a2670e}
+
+
+Modificadora que treu del inventari general del magatzem un producte. 
+
+\begin{DoxyPrecond}{Precondició}
+Preparats al canal d\textquotesingle{}entrada estantard l\textquotesingle{}identificador del producte que es vol eliminar. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+{\itshape idprod} ha estat eliminat del inventari general del magatzem si previament tenia 0 unitats, si no es dona el cas, salta error 
+\end{DoxyPostcond}
+
+
+Definició a la línia 45 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+45                                                        \{
+46     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_a3b4d4ae67bca320f0afc82f26433d85b}{quitar\_prod}(idprod);
+47 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag@{poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag}}
+\index{poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag@{poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag(string \&idprod)}{poner_prod_en_el_s_del_mag(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::poner\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_ab8776250b582bb6b7b666e426d1820c1}{}\label{class_magatzem_ab8776250b582bb6b7b666e426d1820c1}
+
+
+Modificadora que afegeix del inventari general del magatzem un producte. 
+
+\begin{DoxyPrecond}{Precondició}
+Preparats al canal d\textquotesingle{}entrada estandard l\textquotesingle{}identificador del producte que es vol afegir. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+{\itshape idprod} ha estat afegit al inventari general del magatzem amb 0 unitats 
+\end{DoxyPostcond}
+
+
+Definició a la línia 49 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+49                                                         \{
+50     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_abb3cc435ff5eb055f3d640494d418fa7}{poner\_prod}(idprod);
+51 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!compactar@{compactar}}
+\index{compactar@{compactar}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{compactar(int \&idsala)}{compactar(int &idsala)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::compactar (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_aeaebd6e73de2e965686264ecce7a0d26}{}\label{class_magatzem_aeaebd6e73de2e965686264ecce7a0d26}
+
+
+Compacta l\textquotesingle{}estanteria d\textquotesingle{}una sala seguint uns criteris concrets. 
+
+Els criteris són, els productes es desplaçaran cap a l\textquotesingle{}esquerra i cap a baix de manera que no quedi cap lloc buit entre dos productes, ni abans de cap tampoc. I no s\textquotesingle{}ha de canviar l\textquotesingle{}ordre en que aquests estan. \begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+L\textquotesingle{}estanteria de la {\itshape idsala} ha estat compactada seguint els criteris ja mencionats 
+\end{DoxyPostcond}
+
+
+Definició a la línia 53 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+53                                     \{
+54     \textcolor{keywordflow}{if}(\hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].no\_buida()) \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].compactar\_estanteria();
+55 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!reorganizar@{reorganizar}}
+\index{reorganizar@{reorganizar}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{reorganizar(int \&idsala)}{reorganizar(int &idsala)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::reorganizar (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a101e50b85da7acf8bfc892c03321c14c}{}\label{class_magatzem_a101e50b85da7acf8bfc892c03321c14c}
+
+
+Reorganitza l\textquotesingle{}estanteria d\textquotesingle{}una sala seguint uns criteris concrets. 
+
+Els criteris són, els productes són ordenats alfabeticament, sense deixar espais buits entre ells ni abans de cap producte. \begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+L\textquotesingle{}estanteria de la {\itshape idsala} ha estat reorganitzada seguint els criteris ja mecionats 
+\end{DoxyPostcond}
+
+
+Definició a la línia 57 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+57                                       \{
+58     \textcolor{keywordflow}{if}(\hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].no\_buida()) \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].reorganitzar\_estanteria();
+59 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!redimensionar@{redimensionar}}
+\index{redimensionar@{redimensionar}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{redimensionar(int \&idsala, int \&i, int \&j)}{redimensionar(int &idsala, int &i, int &j)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::redimensionar (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala, }
+\item[{int \&}]{i, }
+\item[{int \&}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_adc1523fcbc1112437fdfe739fbeb393f}{}\label{class_magatzem_adc1523fcbc1112437fdfe739fbeb393f}
+
+
+Redimensiona l\textquotesingle{}estanteria a una amb un tamany ixj on i $>$= 1 i j $>$= 1. L\textquotesingle{}estanteria no sera redimensionada si la quantitat d\textquotesingle{}objectes de l\textquotesingle{}estanteria original es superior al tamany de la nova estanteria que es vol redimensionar, si fos el cas donaria error. 
+
+\begin{DoxyPrecond}{Precondició}
+i$>$= 1 i j$>$=1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+La sala amb identidificador {\itshape idsala} te ara tamany ixj, en el cas que la quantitat d\textquotesingle{}objectes de l\textquotesingle{}estanteria original no sigui superior o igual al tamany de la nova estanteria que es vol redimensionar, sino donara error 
+\end{DoxyPostcond}
+
+
+Definició a la línia 61 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+61                                                         \{
+62     \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].Estanteria\_redimensionada(i,j);
+63 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!llegir@{llegir}}
+\index{llegir@{llegir}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{llegir(int \&nombre\+\_\+sales)}{llegir(int &nombre_sales)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::llegir (
+\begin{DoxyParamCaption}
+\item[{int \&}]{nombre\+\_\+sales}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_acb77f36344a5cb8e5590487766400d1c}{}\label{class_magatzem_acb77f36344a5cb8e5590487766400d1c}
+
+
+Llegeix el nombre\+\_\+sales i \char`\"{}omple\char`\"{} el magatzem amb les seves respectives sales que tenen el seu respectiu identificador. 
+
+\begin{DoxyPrecond}{Precondició}
+El parametre implict es buit. Maxim de sales que es poden crear = numero\+\_\+sales. Pel canal estandard d\textquotesingle{}entrada hi han enters, on un 0 representa que no hi ha sala en aquella branca del magatzem 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El parametre implicit conté totes les sales del magatzem amb els seus respectius identificadors 
+\end{DoxyPostcond}
+
+
+Definició a la línia 88 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+88                                        \{
+89     \hyperlink{_magatzem_8cc_a81091915104bc643983c4abb0ed3ab20}{llegir\_arbre}(\hyperlink{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{T},nombre\_sales);
+90     \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V} = \hyperlink{_magatzem_8cc_a7331a282952bdc8b18c070e57e5a13af}{llegir\_vector}(nombre\_sales);
+91 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!consultar\+\_\+pos@{consultar\+\_\+pos}}
+\index{consultar\+\_\+pos@{consultar\+\_\+pos}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{consultar\+\_\+pos(int \&idsala, int \&fila, int \&columna)}{consultar_pos(int &idsala, int &fila, int &columna)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::consultar\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala, }
+\item[{int \&}]{fila, }
+\item[{int \&}]{columna}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a08da684e5a033414ccf05182b3993b5b}{}\label{class_magatzem_a08da684e5a033414ccf05182b3993b5b}
+
+
+Consultora de la posició d\textquotesingle{}un producte a una sala. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Escriu la posició del producte de la sala indicada 
+\end{DoxyPostcond}
+
+
+Definició a la línia 93 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+93                                                                  \{
+94     \textcolor{keywordtype}{string} s = \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].consultar\_pos\_estanteria(fila,columna);
+95     \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{""}) cout << \textcolor{stringliteral}{"  NULL"} << endl;
+96     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  "} << s << endl;
+97 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!inventario\+\_\+del\+\_\+mag@{inventario\+\_\+del\+\_\+mag}}
+\index{inventario\+\_\+del\+\_\+mag@{inventario\+\_\+del\+\_\+mag}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{inventario\+\_\+del\+\_\+mag()}{inventario_del_mag()}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::inventario\+\_\+del\+\_\+mag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a504a5bbe9daa97e89f55caef7e234a0d}{}\label{class_magatzem_a504a5bbe9daa97e89f55caef7e234a0d}
+
+
+Consultora que retorna l\textquotesingle{}inventari general del magatzem. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}escriu cada producte amb el seu identificador i la quantitat total que hi ha al magatzem d\textquotesingle{}ell, ordenat per idprod. Si esta buit, no escriure res 
+\end{DoxyPostcond}
+
+
+Definició a la línia 99 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+99                                   \{
+100     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_a0efdf7e6792aca4405152f480d73f817}{inventario}();
+101 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag@{consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag}}
+\index{consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag@{consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag(string \&idprod)}{consultar_prod_en_el_s_del_mag(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::consultar\+\_\+prod\+\_\+en\+\_\+el\+\_\+s\+\_\+del\+\_\+mag (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a0ce25c60c4ecb22acbc42836f160d770}{}\label{class_magatzem_a0ce25c60c4ecb22acbc42836f160d770}
+
+
+Consultora que retorna les unitats totals d\textquotesingle{}un cert producte al magatzem. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S\textquotesingle{}escriu les unitats totals dins el magatzem del producte amb identificador {\itshape idprod} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 103 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+103                                                             \{
+104     \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_a41536e95e8d3805116ba4b03ef5ed915}{consultar\_prod}(idprod);
+105 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!esta\+\_\+prod\+\_\+al\+\_\+mag@{esta\+\_\+prod\+\_\+al\+\_\+mag}}
+\index{esta\+\_\+prod\+\_\+al\+\_\+mag@{esta\+\_\+prod\+\_\+al\+\_\+mag}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{esta\+\_\+prod\+\_\+al\+\_\+mag(string \&idprod)}{esta_prod_al_mag(string &idprod)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Magatzem\+::esta\+\_\+prod\+\_\+al\+\_\+mag (
+\begin{DoxyParamCaption}
+\item[{string \&}]{idprod}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a401014dc25c79a3b0abbe05e4419d757}{}\label{class_magatzem_a401014dc25c79a3b0abbe05e4419d757}
+
+
+Consultora que retorna un boolea indicant si un cert producte esta al magatzem o no. 
+
+\begin{DoxyPrecond}{Precondició}
+Preparats al canal d\textquotesingle{}entrada estandard l\textquotesingle{}identificador del producte que es vol veure si esta o no 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna cert si el producte esta al magatzem o false si no 
+\end{DoxyPostcond}
+
+
+Definició a la línia 107 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+107                                               \{
+108     \textcolor{keywordflow}{return} \hyperlink{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{S}.\hyperlink{class_sistema_ae9d3be838b19599377f66e0276cbdda8}{esta\_prod}(idprod);
+109 \}
+\end{DoxyCode}
+\index{Magatzem@{Magatzem}!escribir@{escribir}}
+\index{escribir@{escribir}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{escribir(int \&idsala)}{escribir(int &idsala)}}]{\setlength{\rightskip}{0pt plus 5cm}void Magatzem\+::escribir (
+\begin{DoxyParamCaption}
+\item[{int \&}]{idsala}
+\end{DoxyParamCaption}
+)}\hypertarget{class_magatzem_a00b0dca704cec9b018c7cbd2a77a583a}{}\label{class_magatzem_a00b0dca704cec9b018c7cbd2a77a583a}
+
+
+Escriu el contingut de l\textquotesingle{}estanteria de la sala, de dalt a baix i d\textquotesingle{}esquerra a dreta, també les unitats que hi han en total a l\textquotesingle{}estanteria i per ordre d\textquotesingle{}identificador, s\textquotesingle{}aniran escribint tots els idprod i quantes unitats hi han d\textquotesingle{}aquest. 
+
+\begin{DoxyPrecond}{Precondició}
+Existeix una sala amb {\itshape idsala} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Se escriu l\textquotesingle{}estanteria de la sala, de dalt a baix i d\textquotesingle{}esquerra a dreta, les unitats en total a l\textquotesingle{}estanteria, i per ordre d\textquotesingle{}identificador, es treuen tots els productes amb les seves respectives unitats 
+\end{DoxyPostcond}
+
+
+Definició a la línia 111 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+111                                    \{
+112     \hyperlink{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{V}[idsala-1].escriure\_estanteria();
+113 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\index{Magatzem@{Magatzem}!T@{T}}
+\index{T@{T}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{T}{T}}]{\setlength{\rightskip}{0pt plus 5cm}Bin\+Tree$<$int$>$ Magatzem\+::T\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}{}\label{class_magatzem_a59167aef8313d2dc57373eb7e442a38c}
+
+
+Estructura del magatzem. 
+
+
+
+Definició a la línia 150 del fitxer Magatzem.\+hh.
+
+\index{Magatzem@{Magatzem}!V@{V}}
+\index{V@{V}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{V}{V}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Estanteria}$>$ Magatzem\+::V\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_magatzem_a079afd5b97ad95f76897e54632994cf7}{}\label{class_magatzem_a079afd5b97ad95f76897e54632994cf7}
+
+
+Vector amb totes les sales del magatzem. 
+
+
+
+Definició a la línia 152 del fitxer Magatzem.\+hh.
+
+\index{Magatzem@{Magatzem}!S@{S}}
+\index{S@{S}!Magatzem@{Magatzem}}
+\subsubsection[{\texorpdfstring{S}{S}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sistema} Magatzem\+::S\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}{}\label{class_magatzem_ab0a587e18675ddc6a0b1bf08a1b6e6a2}
+
+
+\hyperlink{class_sistema}{Sistema} general del magatzem. 
+
+
+
+Definició a la línia 154 del fitxer Magatzem.\+hh.
+
+
+
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_magatzem_8hh}{Magatzem.\+hh}\item 
+\hyperlink{_magatzem_8cc}{Magatzem.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{program_8cc}{}\section{Referència del Fitxer program.\+cc}
+\label{program_8cc}\index{program.\+cc@{program.\+cc}}
+Inclou el graf de dependències per a program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Programa principal de la simulacio del nou model de magatzem Tree\+K\+EA per a la cadena de tendes de mobles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\index{program.\+cc@{program.\+cc}!main@{main}}
+\index{main@{main}!program.\+cc@{program.\+cc}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Programa principal de la simulacio del nou model de magatzem Tree\+K\+EA per a la cadena de tendes de mobles. 
+
+
+
+Definició a la línia 27 del fitxer program.\+cc.
+
+
+\begin{DoxyCode}
+27            \{
+28     \hyperlink{class_magatzem}{Magatzem} Mag;
+29     \textcolor{keywordtype}{int} num\_sales;
+30     cin >> num\_sales;
+31     Mag.\hyperlink{class_magatzem_acb77f36344a5cb8e5590487766400d1c}{llegir}(num\_sales);
+32     \textcolor{keywordtype}{string} instruccio;
+33     cin >> instruccio;
+34     \textcolor{keywordflow}{while}(instruccio != \textcolor{stringliteral}{"fin"})\{
+35             \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"consultar\_pos"})\{
+36                     \textcolor{keywordtype}{int} idsala, f, c;
+37                     cin >> idsala >> f >> c;
+38                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << \textcolor{stringliteral}{" "} << f << \textcolor{stringliteral}{" "} << c << endl;
+39                     Mag.\hyperlink{class_magatzem_a08da684e5a033414ccf05182b3993b5b}{consultar\_pos}(idsala,f,c);
+40             \}
+41             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"consultar\_prod"})\{
+42                     \textcolor{keywordtype}{string} idprod;
+43                     cin >> idprod;
+44                     cout << instruccio << \textcolor{stringliteral}{" "} << idprod << endl;
+45                     Mag.\hyperlink{class_magatzem_a0ce25c60c4ecb22acbc42836f160d770}{consultar\_prod\_en\_el\_s\_del\_mag}(idprod);
+46             \}
+47             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"inventario"})\{
+48                     cout << instruccio << endl;
+49                     Mag.\hyperlink{class_magatzem_a504a5bbe9daa97e89f55caef7e234a0d}{inventario\_del\_mag}();
+50             \}
+51             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"escribir"})\{
+52                     \textcolor{keywordtype}{int} idsala;
+53                     cin >> idsala;
+54                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << endl;
+55                     Mag.\hyperlink{class_magatzem_a00b0dca704cec9b018c7cbd2a77a583a}{escribir}(idsala);
+56             \}
+57             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"poner\_prod"})\{
+58                     \textcolor{keywordtype}{string} idprod;
+59                     cin >> idprod;
+60                     cout << instruccio << \textcolor{stringliteral}{" "} << idprod << endl;
+61                     Mag.\hyperlink{class_magatzem_ab8776250b582bb6b7b666e426d1820c1}{poner\_prod\_en\_el\_s\_del\_mag}(idprod);
+62             \}
+63             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"quitar\_prod"})\{
+64                     \textcolor{keywordtype}{string} idprod;
+65                     cin >> idprod;
+66                     cout << instruccio << \textcolor{stringliteral}{" "} << idprod << endl;
+67                     Mag.\hyperlink{class_magatzem_a98bf19f0ad6438d4a305bc9dc7a2670e}{quitar\_prod\_del\_s\_del\_mag}(idprod);
+68             \}
+69             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"poner\_items"})\{
+70                     \textcolor{keywordtype}{int} idsala, quant;
+71                     \textcolor{keywordtype}{string} idprod;
+72                     cin >> idsala >> idprod >> quant;
+73                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << \textcolor{stringliteral}{" "} << idprod << \textcolor{stringliteral}{" "} << quant << endl;
+74                     \textcolor{keywordflow}{if} (Mag.\hyperlink{class_magatzem_a401014dc25c79a3b0abbe05e4419d757}{esta\_prod\_al\_mag}(idprod)) \{
+75                         Mag.\hyperlink{class_magatzem_a82f901c8287586a33faa0f3c5030de11}{poner\_items}(idsala, idprod, quant);
+76                     \}
+77                     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  error"} << endl;
+78             \}
+79             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"quitar\_items"})\{
+80                     \textcolor{keywordtype}{int} idsala, quant;
+81                     \textcolor{keywordtype}{string} idprod;
+82                     cin >> idsala >> idprod >> quant;
+83                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << \textcolor{stringliteral}{" "} << idprod << \textcolor{stringliteral}{" "} << quant << endl;
+84                     \textcolor{keywordflow}{if} (Mag.\hyperlink{class_magatzem_a401014dc25c79a3b0abbe05e4419d757}{esta\_prod\_al\_mag}(idprod)) Mag.
+      \hyperlink{class_magatzem_afb609e5a5d912a56b8ae4f8e985602f5}{quitar\_items}(idsala, idprod, quant);
+85                     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  error"} << endl;
+86             \}
+87             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"distribuir"})\{
+88                     \textcolor{keywordtype}{int} quant;
+89                     \textcolor{keywordtype}{string} idprod;
+90                     cin >> idprod >> quant;
+91                     cout << instruccio << \textcolor{stringliteral}{" "} << idprod << \textcolor{stringliteral}{" "} << quant << endl;
+92                     \textcolor{keywordflow}{if} (Mag.\hyperlink{class_magatzem_a401014dc25c79a3b0abbe05e4419d757}{esta\_prod\_al\_mag}(idprod)) Mag.
+      \hyperlink{class_magatzem_a15c31f32a673b7e3cf4443d03ace19a6}{distribuir}(idprod,quant);
+93                     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"  error"} << endl;
+94             \}
+95             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"compactar"})\{
+96                     \textcolor{keywordtype}{int} idsala;
+97                     cin >> idsala;
+98                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << endl;
+99                     Mag.\hyperlink{class_magatzem_aeaebd6e73de2e965686264ecce7a0d26}{compactar}(idsala);
+100             \}
+101             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"reorganizar"})\{
+102                     \textcolor{keywordtype}{int} idsala;
+103                     cin >> idsala;
+104                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << endl;
+105                     Mag.\hyperlink{class_magatzem_a101e50b85da7acf8bfc892c03321c14c}{reorganizar}(idsala);
+106             \}
+107             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(instruccio == \textcolor{stringliteral}{"redimensionar"})\{
+108                     \textcolor{keywordtype}{int} idsala, f, c;
+109                     cin >> idsala >> f >> c;
+110                     cout << instruccio << \textcolor{stringliteral}{" "} << idsala << \textcolor{stringliteral}{" "} << f << \textcolor{stringliteral}{" "} << c << endl;
+111                     Mag.\hyperlink{class_magatzem_adc1523fcbc1112437fdfe739fbeb393f}{redimensionar}(idsala,f,c);
+112             \}
+113             cin >> instruccio;  
+114     \}
+115     cout << \textcolor{stringliteral}{"fin"} << endl;
+116 \}
+\end{DoxyCode}

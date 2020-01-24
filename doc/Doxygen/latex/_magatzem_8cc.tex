@@ -1,0 +1,70 @@
+\hypertarget{_magatzem_8cc}{}\section{Referència del Fitxer Magatzem.\+cc}
+\label{_magatzem_8cc}\index{Magatzem.\+cc@{Magatzem.\+cc}}
+Inclou el graf de dependències per a Magatzem.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{_magatzem_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_magatzem_8cc_a81091915104bc643983c4abb0ed3ab20}{llegir\+\_\+arbre} (Bin\+Tree$<$ int $>$ \&T, int \&nombre\+\_\+sales)
+\item 
+vector$<$ \hyperlink{class_estanteria}{Estanteria} $>$ \hyperlink{_magatzem_8cc_a7331a282952bdc8b18c070e57e5a13af}{llegir\+\_\+vector} (int \&nombre\+\_\+sales)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\index{Magatzem.\+cc@{Magatzem.\+cc}!llegir\+\_\+arbre@{llegir\+\_\+arbre}}
+\index{llegir\+\_\+arbre@{llegir\+\_\+arbre}!Magatzem.\+cc@{Magatzem.\+cc}}
+\subsubsection[{\texorpdfstring{llegir\+\_\+arbre(\+Bin\+Tree$<$ int $>$ \&\+T, int \&nombre\+\_\+sales)}{llegir_arbre(BinTree< int > &T, int &nombre_sales)}}]{\setlength{\rightskip}{0pt plus 5cm}void llegir\+\_\+arbre (
+\begin{DoxyParamCaption}
+\item[{Bin\+Tree$<$ int $>$ \&}]{T, }
+\item[{int \&}]{nombre\+\_\+sales}
+\end{DoxyParamCaption}
+)}\hypertarget{_magatzem_8cc_a81091915104bc643983c4abb0ed3ab20}{}\label{_magatzem_8cc_a81091915104bc643983c4abb0ed3ab20}
+
+
+Definició a la línia 65 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+65                                                      \{
+66     \textcolor{keywordtype}{int} n;
+67     cin >> n;
+68     \textcolor{keywordflow}{if} (n != 0 and n <= nombre\_sales) \{
+69         BinTree<int> left;
+70         BinTree<int> right;
+71         \hyperlink{_magatzem_8cc_a81091915104bc643983c4abb0ed3ab20}{llegir\_arbre}(left,nombre\_sales);
+72         \hyperlink{_magatzem_8cc_a81091915104bc643983c4abb0ed3ab20}{llegir\_arbre}(right,nombre\_sales);
+73         T = BinTree<int>(n,left,right);
+74     \}
+75 \}
+\end{DoxyCode}
+\index{Magatzem.\+cc@{Magatzem.\+cc}!llegir\+\_\+vector@{llegir\+\_\+vector}}
+\index{llegir\+\_\+vector@{llegir\+\_\+vector}!Magatzem.\+cc@{Magatzem.\+cc}}
+\subsubsection[{\texorpdfstring{llegir\+\_\+vector(int \&nombre\+\_\+sales)}{llegir_vector(int &nombre_sales)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Estanteria}$>$ llegir\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{int \&}]{nombre\+\_\+sales}
+\end{DoxyParamCaption}
+)}\hypertarget{_magatzem_8cc_a7331a282952bdc8b18c070e57e5a13af}{}\label{_magatzem_8cc_a7331a282952bdc8b18c070e57e5a13af}
+
+
+Definició a la línia 77 del fitxer Magatzem.\+cc.
+
+
+\begin{DoxyCode}
+77                                                     \{
+78     \textcolor{keywordtype}{int} i, j, k = 0;
+79     vector<Estanteria> V (nombre\_sales);
+80     \textcolor{keywordflow}{while} (k < nombre\_sales) \{
+81         cin >> i >> j;
+82         V[k] = \hyperlink{class_estanteria}{Estanteria}(i,j);
+83         ++k;
+84     \}
+85     \textcolor{keywordflow}{return} V;
+86 \}
+\end{DoxyCode}
